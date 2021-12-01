@@ -1,3 +1,4 @@
-set(TEST_TARGET IsEven)
-add_library(${TEST_TARGET} OBJECT IsEven.cpp)
-target_include_directories(${TEST_TARGET} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+get_filename_component(TARGET ${CMAKE_CURRENT_LIST_DIR} NAME)
+
+add_library(${TARGET} OBJECT ${TARGET}.cpp)
+target_include_directories(${TARGET} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
