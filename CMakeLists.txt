@@ -1,4 +1,6 @@
-project(CPPPractice LANGUAGES CXX)
+cmake_policy(SET CMP0048 NEW)
+
+project(CPPPractice  VERSION 1.0.0 LANGUAGES CXX)
 cmake_minimum_required(VERSION 3.22)
 
 include(cmake/GTest.cmake)
