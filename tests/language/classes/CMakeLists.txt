@@ -1,3 +1,4 @@
+
 get_filename_component(TARGET_ ${CMAKE_CURRENT_LIST_DIR} NAME)
 set(TARGET ${TARGET_}Test)
 
