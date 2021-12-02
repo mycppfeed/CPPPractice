@@ -8,11 +8,6 @@ TEST(ClassTest, EmptyClass) {
 
 class ClassTestFix : public ::testing::Test {
 protected:
-    void SetUp() override {
-        simpleClass_0.x = 1;
-        simpleClass_1.setX(2);
-    }
-
     SimpleClass_0 simpleClass_0;
     SimpleClass_1 simpleClass_1;
  };
@@ -22,11 +17,8 @@ TEST_F(ClassTestFix, SimpleClass0) {
     EXPECT_EQ(true, true);
     EXPECT_EQ(sizeof(SimpleClass_0), 4);
     
-    EXPECT_EQ(simpleClass_0.x, 1);
-    EXPECT_EQ(simpleClass_1.getX(), 2);
+    EXPECT_EQ(simpleClass_0.x, 0);
+    EXPECT_EQ(simpleClass_1.getX(), 0);
+    EXPECT_EQ(simpleClass_1.setX(1), 0);
+    EXPECT_EQ(simpleClass_1.getX(), 1);
 }
-
-
-// TEST(ClassTest, SimpleClassCheckValue) {
-//     EXPECT_EQ(sizeof(SimpleClass_0), 4);
-// }
